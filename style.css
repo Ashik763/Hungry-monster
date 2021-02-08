@@ -1,4 +1,5 @@
 #meals{
+    margin-left: 50px;
     display: grid;
     grid-template-columns:repeat(3,1fr) ;
     grid-gap:10px;
@@ -7,7 +8,7 @@
 
 
 .item{
-    /* border: 1px solid red; */
+    
     border-radius: 20px;
     padding: 20px;
     text-align: center;
@@ -16,11 +17,41 @@
 
 }
 .item img{
-    /* border: 1px solid red; */
+    
     border-radius: 20px;
     padding: 0px;
     margin: 0px;
     text-align: center;
     width: 300px;
 
+}
+
+#ingredients{
+    margin: 5%;
+    text-align: center;
+}
+#ingredients img{
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+}
+#ingredient-title{
+    color:red;
+}
+#search-container{
+    text-align: center;
+}
+#input{
+    width: 50%;
+}
+#search-btn{
+    background-color:hotpink ;
+    margin: 10px;
+    padding:0px 15px;
+    border-radius: 5px;
+    color: white;
+}
+#error-message{
+    text-align: center;
+    color: red;
 }

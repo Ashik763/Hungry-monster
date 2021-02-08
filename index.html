@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hungry Monster</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   <div id="search-container"> 
+       <input id="input" type="text" placeholder="search here"><button onclick="searchItem()" id="search-btn">search</button>
+
+
+</div>
+<div id="error-message" class="text-danger"> 
+    
+
+
+</div>
+
+    <div onclick="displayItemsDetail('${meal.strMeal}')" id="ingredients">
+
+    </div>
     <div id="meals">
-        <!-- <img id="pic"></img> -->
+      
         
     </div>
 
