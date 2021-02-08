@@ -53,5 +53,9 @@
 }
 #error-message{
     text-align: center;
+    
+}
+#error-message h2{
+    text-align: center;
     color: red;
 }

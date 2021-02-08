@@ -1,48 +1,30 @@
-// const input = document.getElementById("input").value
-// document.getElementById("search-btn").addEventListener('click',function(input){
 
-//     const search=`https://www.themealdb.com/api/json/v1/1/search.php?f=${input}`
-        
-//         fetch(search)
-//         .then(res => res.json())
-
-//   .then(data => displayItems(data));
-// })
-
+//search part
 const searchItem = () =>{
     const searchText = document.getElementById("input").value;
-    // console.log(searchText);
+    
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
-    // console.log(url);
+  
     fetch(url)
     .then(res => res.json())
 
  .then(data => displayItems(data))
  .catch(error => displayError('Something went wrong!please try again letter.'));
-//  .then(data => console.log(data));
+
 }
-// const displayError = error =>{
-//         const errorTag = document.getElementById('error-message');
-//         errorTag.innerText =error;
-//     }
+//error part
 const displayError = error =>{
     const errorTag = document.getElementById('error-message');
     errorTag.innerHTML =`
     <img src="error1.jpg">
-    <h3>Sorry! Something went wrong.</h3>
+    <h2>Sorry! Something went wrong.</h2>
+    <h3>Tips:refresh again & search with some meaningful words!</h3>
     
     
     `
 }
 
 
-// fetch('https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast')
-
-// .then(res => res.json())
-
-//  .then(data => displayItems(data));
-
- 
 
 const displayItems = items =>{
     const itemsDiv = document.getElementById('meals');
@@ -82,6 +64,7 @@ const displayItemsDetail = itemName =>{
     
     
 }
+//  items details
   
 const itemIngredient = ingredient =>{
    
@@ -107,7 +90,3 @@ const itemIngredient = ingredient =>{
     console.log(ingredient.meals[0].strIngredient5);
 }
 
-// const displayError = error =>{
-//     const errorTag = document.getElementById('error');
-//     errorTag.innerText =error;
-// }
